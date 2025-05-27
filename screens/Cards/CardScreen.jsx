@@ -8,6 +8,7 @@ export default function CardScreen() {
     <View style={{ padding: 20, flex: 1 }}>
       <PlaceholderCard
         image={require("../../assets/images/placeholderCardImage.png")}
+        onButtonPress={() => console.log("Button Pressed")}
       />
     </View>
   );

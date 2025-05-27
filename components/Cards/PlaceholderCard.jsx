@@ -7,6 +7,7 @@ const PlaceholderCard = ({
   buttonText = "Button text",
   buttonIcon = <AntDesign name="arrowright" size={20} color="white" />,
   image,
+  onButtonPress,
 
   cardContainerStyle,
   leftColumnStyle,
@@ -32,7 +33,10 @@ const PlaceholderCard = ({
           {content && <Text style={[styles.text, textStyle]}>{content}</Text>}
         </View>
         {buttonText && (
-          <TouchableOpacity style={[styles.button, buttonStyle]}>
+          <TouchableOpacity
+            onPress={onButtonPress}
+            style={[styles.button, buttonStyle]}
+          >
             {buttonText && (
               <Text style={[styles.buttonText, buttonTextStyle]}>
                 {buttonText}
